@@ -218,14 +218,12 @@
 
         axios.get('http://localhost:3000/budget').then(function (res) {
             var budgetArray = res.data.myBudget;
-            //console.log(budgetArray);
 
             const backgroundColors = [];
             var labels = [];
             var values = [];
 
             for (var i = 0; i < budgetArray.length; i++) {
-                //console.log(res.data.myBudget[i]);
                 backgroundColors.push(budgetArray[i].color);
                 labels.push(budgetArray[i].title);
                 values.push(budgetArray[i].budget);
